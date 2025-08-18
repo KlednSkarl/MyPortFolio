@@ -54,6 +54,7 @@
     .hero .cta{display:flex; gap:12px; margin-top:14px}
     .btn{background:var(--brand); border:none; padding:12px 16px; border-radius:14px; font-weight:700}
     .btn.secondary{background:transparent; color:var(--text); outline:1px solid rgba(148,163,184,.35)}
+    
     .hero .art{aspect-ratio:1/1; border-radius:24px; background:radial-gradient(120px 120px at 30% 30%, var(--brand), transparent),
       radial-gradient(120px 120px at 70% 70%, var(--accent), transparent);
       border:1px solid rgba(148,163,184,.2)}
