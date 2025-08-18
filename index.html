@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My One-Page Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- ===== NAVBAR (4 Items) ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">John_Cris<span>.dev</span></div>
+      <div class="spacer"></div>
+      <button class="menu-btn" aria-label="Toggle menu" id="menuBtn">☰</button>
+      <div class="links" id="navLinks">
+        <a href="#home" class="navlink active">Home</a>
+        <a href="#projects" class="navlink">Projects</a>
+        <a href="#about" class="navlink">About</a>
+        <a href="#contact" class="navlink">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== SECTIONS ===== -->
+  <section id="home">
+    <div class="container hero">
+      <div class="card">
+        <span class="pill">📱 Mobile Developer · Android (Kotlin)</span>
+        <h1>Building fast, reliable mobile apps.</h1>
+        <p>I specialize in Android (Java), Retrofit APIs, SQLite/Room, Bluetooth printing, and clean MVVM architecture. Below are a few featured projects with quick YouTube demos.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div style="font-size:1.6rem; font-weight:800">12+</div><div>Apps built</div></div>
+          <div class="kpi"><div style="font-size:1.6rem; font-weight:800">5</div><div>Play Store launches</div></div>
+          <div class="kpi"><div style="font-size:1.6rem; font-weight:800">3</div><div>Years experience</div></div>
+        </div>
+      </div>
+      <div class="art">
+            <img class ="myImg" src="images/myimg.jpg"/>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p>Each card includes a short description, tech stack, and a YouTube demo link. Replace with your own.</p>
+
+      <div class="grid" style="margin-top:18px">
+        <article class="card col-6">
+          <h3>Smart Meter Reader (Android · Kotlin)</h3>
+          <p>Offline-first field reading app with secure login, local queueing, and background sync.</p>
+          <p><strong>Stack:</strong> Kotlin, MVVM, Retrofit, Room, Coroutines</p>
+          <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ Watch demo</a> · <a href="#">GitHub</a></p>
+        </article>
+        <article class="card col-6">
+          <h3>POS Bluetooth Receipt Printer</h3>
+          <p>Prints receipts across activities with a centralized helper; supports ESC/POS printers.</p>
+          <p><strong>Stack:</strong> Kotlin, BluetoothAdapter, Service, LiveData</p>
+          <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ Watch demo</a> · <a href="#">GitHub</a></p>
+        </article>
+        <article class="card col-4">
+          <h3>Retrofit + SQL Server API</h3>
+          <p>Android client consuming Express+mssql backend with token auth and pagination.</p>
+          <p><strong>Stack:</strong> Kotlin, Retrofit, OkHttp, Express, MSSQL</p>
+          <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ Watch demo</a> · <a href="#">GitHub</a></p>
+        </article>
+        <article class="card col-4">
+          <h3>Data Visualization Dashboard</h3>
+          <p>In-app charts for hourly sales and usage with MPAndroidChart and caching.</p>
+          <p><strong>Stack:</strong> Kotlin, MPAndroidChart, Room</p>
+          <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ Watch demo</a> · <a href="#">GitHub</a></p>
+        </article>
+        <article class="card col-4">
+          <h3>Auth + Permissions</h3>
+          <p>JWT auth, role-based UI, runtime permissions, and robust error handling.</p>
+          <p><strong>Stack:</strong> Kotlin, Jetpack, JWT</p>
+          <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ Watch demo</a> · <a href="#">GitHub</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <div class="grid" style="margin-top:12px">
+        <div class="card col-6">
+          <h3>Who I am</h3>
+          <p>Mobile developer focused on Android. I enjoy clean architecture, efficient networking, and smooth UI/UX with RecyclerViews, diffing, and accessibility in mind.</p>
+        </div>
+        <div class="card col-6">
+          <h3>Skills</h3>
+          <p><strong>Languages:</strong> Kotlin, Java, JavaScript</p>
+          <p><strong>Frameworks:</strong> Android Jetpack, Retrofit, Room, Coroutines</p>
+          <p><strong>Tools:</strong> Git, Gradle, Postman, Android Studio</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="card">
+        <form class="form" onsubmit="event.preventDefault(); alert('Thanks! I\'ll get back to you.');">
+          <input class="input" placeholder="Your name" required />
+          <input type="email" class="input" placeholder="Email" required />
+          <textarea class="input" placeholder="Message" rows="5" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> John Cris • Made with HTML/CSS/JS
+  </footer>
+
+  <script src="script.js"></script>
+   
+ 
+</body>
+</html>

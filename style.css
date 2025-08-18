@@ -1,0 +1,93 @@
+:root{
+      --bg:#0f172a;          /* slate-900 */
+      --panel:#111827;       /* gray-900 */
+      --muted:#94a3b8;       /* slate-400 */
+      --text:#e5e7eb;        /* gray-200 */
+      --brand:#22d3ee;       /* cyan-400 */
+      --accent:#a78bfa;      /* violet-400 */
+      --ring:rgba(34,211,238,.3);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:linear-gradient(180deg, var(--bg), #0b1223 60%, #0a0f1e);
+      color:var(--text);
+    }
+    /* ===== NAVBAR ===== */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background:rgba(15,23,42,.7);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(148,163,184,.15);
+    }
+    .nav-inner{max-width:1100px; margin:auto; display:flex; align-items:center; gap:16px; padding:12px 20px}
+    .brand{font-weight:700; letter-spacing:.4px}
+    .brand span{color:var(--brand)}
+    .spacer{flex:1}
+    .links{display:flex; gap:10px}
+    .links a{
+      display:inline-block; padding:10px 14px; border-radius:12px; text-decoration:none; color:var(--text);
+      transition:transform .1s ease, background .2s ease;
+    }
+    .links a:hover{background:rgba(148,163,184,.1)}
+    .links a.active{background:rgba(167,139,250,.15); outline:1px solid rgba(167,139,250,.35)}
+    .menu-btn{display:none; background:transparent; border:1px solid rgba(148,163,184,.3); color:var(--text); border-radius:12px; padding:8px 10px}
+
+    @media (max-width: 760px){
+      .links{display:none; position:absolute; top:58px; left:0; right:0; background:rgba(15,23,42,.95);
+        border-bottom:1px solid rgba(148,163,184,.15); flex-direction:column; padding:8px}
+      .links.open{display:flex}
+      .menu-btn{display:inline-flex}
+    }
+
+    /* ===== SECTIONS ===== */
+    section{min-height:100svh; display:grid; place-items:center; padding:80px 20px}
+    .container{max-width:1100px; width:100%;}
+    h1,h2{margin:0 0 12px}
+    p{color:var(--muted); line-height:1.65}
+
+    /* Hero */
+    .hero{display:grid; gap:22px; align-items:center; grid-template-columns:1.2fr .8fr}
+    .hero .card{background:linear-gradient(180deg, rgba(167,139,250,.12), rgba(34,211,238,.08)); border:1px solid rgba(148,163,184,.2);
+      border-radius:24px; padding:30px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .hero .cta{display:flex; gap:12px; margin-top:14px}
+    .btn{background:var(--brand); border:none; padding:12px 16px; border-radius:14px; font-weight:700}
+    .btn.secondary{background:transparent; color:var(--text); outline:1px solid rgba(148,163,184,.35)}
+    .hero .art{aspect-ratio:1/1; border-radius:24px; background:radial-gradient(120px 120px at 30% 30%, var(--brand), transparent),
+      radial-gradient(120px 120px at 70% 70%, var(--accent), transparent);
+      border:1px solid rgba(148,163,184,.2)}
+
+.hero .myImg{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+   
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+    }
+
+    /* Cards */
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(12,1fr)}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .card{background:rgba(17,24,39,.6); border:1px solid rgba(148,163,184,.18); border-radius:20px; padding:22px}
+    .pill{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; font-size:.85rem; background:rgba(34,211,238,.15); border:1px solid rgba(34,211,238,.35); margin-bottom:10px}
+    .kpis{display:flex; gap:16px; margin-top:14px}
+    .kpi{flex:1; background:rgba(15,23,42,.6); border:1px solid rgba(148,163,184,.18); border-radius:16px; padding:16px; text-align:center}
+
+    @media (max-width:900px){
+      .col-6,.col-4{grid-column:span 12}
+      .kpis{flex-direction:column}
+    }
+
+    /* Contact */
+    .form{display:grid; gap:12px}
+    .input{width:100%; padding:12px 14px; border-radius:12px; background:#0b1223; color:var(--text);
+      border:1px solid rgba(148,163,184,.25); outline:2px solid transparent; outline-offset:2px}
+    .input:focus{outline-color:var(--ring)}
+
+    /* Footer */
+    footer{padding:30px 20px; color:var(--muted); text-align:center; border-top:1px solid rgba(148,163,184,.12)}
+ 
