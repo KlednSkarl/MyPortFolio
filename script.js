@@ -25,3 +25,15 @@
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    function sendMail(){
+        let parms = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message:document.getElementById("message").value
+        }
+
+
+        emailjs.send("service_1w83nms","template_g2n76lz",parms).then(alert("Email sent "))
+    }
